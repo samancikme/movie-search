@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: rgba(25, 25, 25, 0.95);
+}
+
+section .container {
+  width: 90%;
+  margin: 0 auto;
+}
+section .container header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  gap: 80px;
+}
+section .container header .header-content .logo {
+  width: 30%;
+}
+section .container header .header-content .logo img {
+  width: 100%;
+}
+section .container header .header-content .search-bar {
+  gap: 1px;
+  width: 70%;
+}
+section .container header .header-content .search-bar form {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+section .container header .header-content .search-bar form input {
+  padding: 10px 25px;
+  width: 100%;
+  background: rgba(76, 76, 76, 0.63);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(189, 189, 189, 0.41);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgb(213, 213, 213);
+  color: rgb(186, 186, 186);
+  font-size: 14px;
+  font-weight: 400;
+  outline-style: none;
+}
+section .container header .header-content .search-bar form .btn {
+  border-radius: 50%;
+  border: transparent;
+  position: absolute;
+  font-size: 30px;
+  background-color: transparent;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+section .container header .header-content .search-bar form .btn i {
+  color: rgba(195, 195, 195, 0.775);
+  font-weight: 400;
+}
+section .container header .header-content .filter-content {
+  align-items: center;
+  width: 25%;
+  justify-content: end;
+  display: flex;
+  position: relative;
+}
+section .container header .header-content .filter-content #filter {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 16px;
+  background: rgba(76, 76, 76, 0.63);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.904);
+  outline-style: none;
+  transition: all 1s ease-in-out;
+  border: none;
+  appearance: none;
+  border: 1px solid rgb(213, 213, 213);
+}
+section .container header .header-content .filter-content #filter option {
+  color: rgb(255, 255, 255);
+  background-color: rgba(118, 118, 118, 0.493);
+  font-size: 16px;
+  padding: 15px;
+  font-weight: 500;
+}
+section .container header .header-content .filter-content .icon {
+  position: absolute;
+  right: 8px;
+}
+section .container header .header-content .filter-content .icon i {
+  color: white;
+  font-size: 22px;
+  font-weight: 200;
+}
+section .container main {
+  height: calc(100vh - 100px);
+  border-radius: 15px;
+  overflow-y: scroll;
+  padding: 25px 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+section .container main .main-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+section .container main .main-content .card {
+  border-radius: 10px;
+  height: 350px;
+  position: relative;
+  transition: all 0.45s ease-in-out;
+}
+section .container main .main-content .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+section .container main .main-content .card h1 {
+  width: 100%;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(117, 117, 117, 0.431372549);
+  border-radius: 0 0 10px 10px;
+}
+section .container main .main-content .card .year {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: rgba(103, 79, 24, 0.903);
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+section .container main .main-content .card .type {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: rgba(108, 85, 0, 0.61);
+  top: 15px;
+  right: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f1f1f1;
+}
+section .container main .main-content .card:hover {
+  transform: scale(1.05);
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 37, 37, 0.607);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.loading .spinner {
+  border: 16px solid #a2a2a2;
+  border-top: 16px solid rgba(98, 65, 34, 0.8470588235);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.5s cubic-bezier(0.45, 0.08, 1, 1) infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 1024px) {
+  section .container main .main-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  section .container header .header-content {
+    gap: 20px;
+  }
+  section .container main .main-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 650px) {
+  section .container header .header-content {
+    gap: 10px;
+    height: 80px;
+  }
+  section .container header .header-content .logo {
+    display: none;
+  }
+  section .container main .main-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  section .container header .header-content {
+    gap: 10px;
+    height: 80px;
+  }
+  section .container header .header-content .logo {
+    display: none;
+  }
+  section .container header .header-content .search-bar form input {
+    padding: 10px;
+  }
+  section .container header .header-content .filter-content #filter {
+    padding: 10px;
+  }
+  section .container header .header-content .filter-content .icon {
+    display: none;
+  }
+  section .container main .main-content .card {
+    height: 300px;
+  }
+  section .container main .main-content .card .year {
+    top: 10px;
+    left: 5px;
+    font-size: 12px;
+  }
+  section .container main .main-content .card .type {
+    top: 10px;
+    right: 5px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

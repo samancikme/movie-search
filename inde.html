@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./sass/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="">
+                    </div>
+                    <div class="search-bar">
+                        <form>
+                            <input id="input" type="text" placeholder="Search...">
+                            <button id="button" class="btn">
+                                <i class='bx bx-search-alt'></i>
+                            </button>
+                        </form>
+                    </div>
+    
+                    <div class="filter-content">
+                        <select  id="filter" >
+                            <option value="">Filter</option>
+                            <option value="">All Movies</option>
+                            <option value="series">Movies</option>
+                            <option value="movie">Series</option>
+                       </select>
+                       <div class="icon"><i class='bx bx-filter-alt'></i></div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="main-content">
+                    <!-- movie -->
+                </div>
+            </main>
+        </div>
+        
+    </section>
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
